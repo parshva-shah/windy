@@ -1,0 +1,59 @@
+.main-container {
+  height: 100%;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+  margin-top: 1%;
+}
+.location-container {
+  background-color: #4f7ffa;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 90%;
+  padding: 1vh 0;
+  border-radius: 15px;
+}
+.weather-container {
+  display: flex;
+}
+.weather {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.temp,
+.location {
+  font-size: 22px;
+  color: white;
+}
+.time {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-evenly;
+}
+.hour-container {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+}
+.days-container {
+  display: flex;
+  margin: auto;
+  width: 90%;
+}
+.hour {
+  display: flex;
+  gap: 10px;
+  overflow: scroll;
+}
+.hour-single {
+  display: flex;
+  background-color: lightgray;
+  border-radius: 10px;
+}

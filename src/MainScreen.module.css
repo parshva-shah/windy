@@ -5,8 +5,7 @@
 .header {
   display: flex;
   justify-content: space-between;
-  margin: 5%;
-  margin-top: 1%;
+  margin: 1% 5%;
 }
 .location-container {
   background-color: #4f7ffa;
@@ -46,14 +45,73 @@
   display: flex;
   margin: auto;
   width: 90%;
+  flex-direction: column;
 }
 .hour {
   display: flex;
   gap: 10px;
-  overflow: scroll;
+  overflow-x: scroll;
 }
 .hour-single {
   display: flex;
-  background-color: lightgray;
+  background-color: #fbfbfb;
   border-radius: 10px;
+}
+.hour::-webkit-scrollbar {
+  display: none;
+}
+.days {
+  background-color: rgba(210, 223, 255, 1);
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  padding: 1vh 2vh;
+  border-radius: 5px;
+  margin-bottom: 3vh;
+  align-items: center;
+}
+.days.next {
+  background-color: rgba(231, 117, 92, 0.13);
+}
+.day-weather {
+  display: flex;
+}
+.detailed_information {
+  display: flex;
+  margin: auto;
+  width: 90%;
+  flex-direction: column;
+}
+.aqi {
+  background-color: rgba(250, 250, 250, 1);
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding: 1vh 2vh;
+  border-radius: 5px;
+  margin-bottom: 3vh;
+  align-items: center;
+  gap: 20%;
+}
+.extra-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.extra {
+  background-color: rgba(250, 250, 250, 1);
+  display: flex;
+  margin: auto;
+  width: 100%;
+  padding: 2vh 0;
+  padding-left: 2vh;
+  border-radius: 5px;
+  margin-bottom: 3vh;
+  align-items: center;
+}
+.info {
+  position: absolute;
+  font-size: 20px;
+  padding-left: 20%;
 }

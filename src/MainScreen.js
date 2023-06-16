@@ -9,7 +9,7 @@ const MainScreen = () => {
 
   const getWeatherData = useCallback((location) => {
     fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=14ecbdda2c8d4f5c9a1121301231506&q=${location}&days=5&aqi=yes`
+      `https://api.weatherapi.com/v1/forecast.json?key=14ecbdda2c8d4f5c9a1121301231506&q=${location}&days=5&aqi=yes`
     )
       .then((resp) => resp.json())
       .then((response) => {

@@ -14,6 +14,7 @@ const MainScreen = () => {
       .then((resp) => resp.json())
       .then((response) => {
         if (response.error) {
+          alert(`${response.error.message} Showing data of your location.`);
           navigator.geolocation.getCurrentPosition((position) => {
             getWeatherData(
               `${position.coords.latitude},${position.coords.longitude}`
@@ -50,12 +51,13 @@ const MainScreen = () => {
             </div>
             <input
               placeholder="Search location"
+              style={{ width: "60%" }}
               onKeyDown={(e) => {
                 if (e.key === "Enter") {
                   getWeatherData(e.target.value);
+                  e.target.value = "";
                 }
               }}
-              style={{ width: "60%" }}
             />
           </>
         )}
@@ -167,7 +169,21 @@ const MainScreen = () => {
         <div className={classes["detailed_information"]}>
           <h3> Detailed Information </h3>
           <div className={classes["aqi"]}>
-            <img src={images?.loader} alt="loader" />
+            <div style={{ position: "relative" }}>
+              <img src={images?.loader} alt="loader" />
+              <div
+                style={{
+                  position: "absolute",
+                  top: "25%",
+                  left: "30%",
+                  display: "flex",
+                  fontSize: "20px",
+                  color: "rgba(42, 168, 55, 1)",
+                }}
+              >
+                12
+              </div>
+            </div>
             <div
               style={{
                 display: "flex",
@@ -192,7 +208,7 @@ const MainScreen = () => {
               }}
             >
               <div className={classes["extra"]}>
-                <img src={images?.humidity} alt="" />
+                <img src={images?.humidity} alt="humidity" />
                 <h3 style={{ paddingLeft: "20px" }}>
                   {weatherData?.current.humidity}%
                 </h3>
